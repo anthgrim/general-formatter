@@ -30,4 +30,4 @@ const generalFormatter = {
   convertToDateString,
 };
 
-module.exports = generalFormatter;
+export default generalFormatter;
