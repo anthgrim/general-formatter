@@ -1,6 +1,6 @@
 {
   "name": "general-formatter",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "JS package for general string formatting. Dates, currencies, etc.",
   "main": "index.js",
   "type": "module",
@@ -15,7 +15,7 @@
     "formatter"
   ],
   "author": "Kevin Grimaldi",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/anthgrim/formatter-npm-package/issues"
   },
