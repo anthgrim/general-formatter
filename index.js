@@ -21,13 +21,25 @@ const convertToMoneyString = (amount, countryCode, style, currencyCode) => {
 const convertToDateString = (date, countryCode) => {
   const newDate = new Date(date);
   newDate.setMinutes(newDate.getMinutes() + newDate.getTimezoneOffset());
-
   return new Intl.DateTimeFormat(countryCode).format(newDate);
+};
+
+/**
+ * @desc   Takes an string and verifies if has a correct email format
+ * @param {string} value
+ * @returns {boolean} true or false
+ */
+const validateEmailFormat = (value) => {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+    return true;
+  }
+  return false;
 };
 
 const generalFormatter = {
   convertToMoneyString,
   convertToDateString,
+  validateEmailFormat,
 };
 
 export default generalFormatter;
