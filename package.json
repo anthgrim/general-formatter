@@ -1,6 +1,6 @@
 {
   "name": "general-formatter",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "JS package for general string formatting. Dates, currencies, etc.",
   "main": "index.js",
   "type": "module",
