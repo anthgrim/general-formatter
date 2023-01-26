@@ -26,9 +26,6 @@ npm i general-formatter
 general-formatter uses ES6 so you need to use imports :)
 
 ```JavaScript
-import generalFormatter from "general-formatter";
-
-// or
 import {convertToMoneyString, convertToDateString, validateEmailFormat} from "general-formatter"
 ```
 
@@ -39,14 +36,6 @@ import {convertToMoneyString, convertToDateString, validateEmailFormat} from "ge
 This function takes a number amount, string country code, the style you want the number to be returned to, and the currency code
 
 ```JavaScript
-const convertToMoneyString = (amount, countryCode, style, currencyCode) => {
-  return new Intl.NumberFormat(countryCode, {
-    style: style,
-    currency: currencyCode,
-  }).format(amount);
-};
-
-// Example
 const myMoneyString = convertToMoneyString(29.465654023, "en-US", "currency", "USD")
 
 console.log(myMoneyString) // Logs $29.47
@@ -57,14 +46,6 @@ console.log(myMoneyString) // Logs $29.47
 This function takes a date-like string, and a country code string referring to the country date format you want your date to be returned.
 
 ```JavaScript
-const convertToDateString = (date, countryCode) => {
-  const newDate = new Date(date);
-  newDate.setMinutes(newDate.getMinutes() + newDate.getTimezoneOffset());
-  return new Intl.DateTimeFormat(countryCode).format(newDate);
-};
-
-
-// Example
 const myDateString = convertToDateString("2022-10-10T22:11:02.024+00:00", "en-US")
 
 console.log(myDateString) // Logs 10/10/2022
@@ -75,15 +56,6 @@ console.log(myDateString) // Logs 10/10/2022
 This function takes an string, and uses regex to validate if the string has a valid email format.
 
 ```JavaScript
-const validateEmailFormat = (value) => {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
-    return true;
-  }
-  return false;
-};
-
-
-// Example
 const isValidEmail = validateEmailFormat("johndoe")
 
 console.log(isValidEmail) // Logs false
@@ -94,7 +66,7 @@ console.log(isValidEmail) // Logs false
 - Fork this repository
 - Follow the git commands in your favorite terminal
   ```bash
-  git clone git@github.com:anthgrim/formatter-npm-package.git
+  git clone git@github.com:<gitHubUsername>/formatter-npm-package.git
   cd formatter-npm-package
   git checkout -b <NameYourNewBranch>
   ```
